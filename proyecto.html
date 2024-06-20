@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="mar2.css">
+    <title>Menú de Navegación Básico</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        nav {
+            background-color: #333;
+        }
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+        nav ul li {
+            float: left;
+        }
+        nav ul li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        nav ul li a:hover {
+            background-color: #111;
+        }
+    </style>
+</head>
+<body background="corazoncito.jpg">
+    <nav>
+        <ul>
+            <li><a href="Servicios.html">Servicios</a></li>
+            <li><a href="Precios.html">Precios</a></li>
+            <li><a href="https://maps.app.goo.gl/cBRRDpygoxcS6UQaA">Ubicacion</a></li>
+            <li><a href="Horarios.html">Horarios</a></li>
+            <li><a href="Fotos.html">Fotos</a></li>
+            <li><a href="Cretidos.html">Creditos</a></li>
+            <li><a href="miresponsiva.html">Responsiva</a></li>
+            
+        </ul>
+    </nav>
+    <div id="marquee-container">
+        <marquee id="marquee" behavior="scroll" direction="right">¡Gracias por visitar el sitio web!</marquee> 
+    </div>
+    <br>
+<script>
+    function toggleMarquee() {
+            const marquee = document.getElementById('marquee-container');
+            marquee.style.display = marquee.style.display === 'none' ? 'block' : 'none';
+        }
+</script>
+</body>
+</html>

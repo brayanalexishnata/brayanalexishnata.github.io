@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body background="corazoncito.jpg">
+    <style>
+        body {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 100vh;
+          margin: 0;
+          font-family: Arial, sans-serif;
+          background-color: #f0f0f0;
+        }
+        .container {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          gap: 10px;
+        }
+        .box {
+          width: 50px;
+          height: 50px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background-color: #3498db;
+          color: white;
+          font-size: 18px;
+          cursor: pointer;
+          transition: background-color 0.3s ease;
+        }
+      </style>
+    </head>
+    <body>
+      <div class="container">
+        <div class="box">C</div>
+        <div class="box">A</div>
+        <div class="box">R</div>
+        <div class="box">D</div>
+        <div class="box">I</div>
+        <div class="box">O</div>
+        <div class="box">L</div>
+        <div class="box">O</div>
+        <div class="box">G</div>
+        <div class="box">I</div>
+        <div class="box">A</div>
+      </div>
+    
+      <script>
+        function cambiarColor(event) {
+          const colores = ["#FF5733", "#33FF57", "#5733FF", "#FF3357", "#33FFC1", "#336CFF"];
+          const colorAleatorio = colores[Math.floor(Math.random() * colores.length)];
+          event.target.style.backgroundColor = colorAleatorio;
+        }
+    
+        document.querySelectorAll('.box').forEach(box => {
+          box.addEventListener('click', cambiarColor);
+        });
+      </script>
+</body>
+</html>
